@@ -1,0 +1,416 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Trusted AC Service
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    /* Floating buttons */
+    #whatsapp-btn, #call-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      z-index: 50;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+    #whatsapp-btn {
+      background-color: #25d366;
+      bottom: 80px;
+    }
+    #whatsapp-btn:hover {
+      background-color: #1ebe57;
+    }
+    #call-btn {
+      background-color: #3b82f6;
+      bottom: 20px;
+    }
+    #call-btn:hover {
+      background-color: #2563eb;
+    }
+    /* Animation for slide images */
+    @keyframes slideAnimation {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-100%); }
+      40% { transform: translateX(-200%); }
+      60% { transform: translateX(-300%); }
+      80% { transform: translateX(-400%); }
+      100% { transform: translateX(0); }
+    }
+    .slider-track {
+      display: flex;
+      width: 500%;
+      animation: slideAnimation 25s infinite;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-40">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+     <a class="text-2xl font-bold text-blue-600" href="#">
+      Trusted AC Service
+     </a>
+     <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+      <a class="hover:text-blue-600 transition" href="#features">
+       Features
+      </a>
+      <a class="hover:text-blue-600 transition" href="#our-work">
+       Our Work
+      </a>
+      <a class="hover:text-blue-600 transition" href="#technician">
+       Expert Technician
+      </a>
+      <a class="hover:text-blue-600 transition" href="#reviews">
+       Customer Reviews
+      </a>
+      <a class="hover:text-blue-600 transition" href="#contact">
+       Contact
+      </a>
+     </div>
+     <div class="md:hidden">
+      <button aria-label="Toggle menu" class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600" id="menu-btn">
+       <i class="fas fa-bars fa-lg">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <div class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
+    <a class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50" href="#features">
+     Features
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50" href="#our-work">
+     Our Work
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50" href="#technician">
+     Expert Technician
+    </a>
+    <a class="block px-4 py-3 border-b border-gray-200 hover:bg-blue-50" href="#reviews">
+     Customer Reviews
+    </a>
+    <a class="block px-4 py-3 hover:bg-blue-50" href="#contact">
+     Contact
+    </a>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="pt-24 bg-gradient-to-r from-blue-400 to-blue-600 text-white">
+   <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 space-y-6">
+     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+      Trusted AC Service
+      <br/>
+      in South Delhi
+     </h1>
+     <p class="text-lg md:text-xl max-w-md">
+      Reliable, affordable, and expert air conditioning services in Malviya Nagar, Hauz Khas, Green Park, Greater Kailash, RK Puram, Okhla, Jamia Nagar, and South Delhi.
+     </p>
+     <div class="flex space-x-4">
+      <a class="bg-white text-blue-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition" href="#contact">
+       Book Service
+      </a>
+      <a class="bg-blue-800 text-white font-semibold px-6 py-3 rounded shadow hover:bg-blue-900 transition flex items-center space-x-2" href="tel:7906371476">
+       <i class="fas fa-phone-alt">
+       </i>
+       <span>
+        Call Now
+       </span>
+      </a>
+     </div>
+    </div>
+    <div class="md:w-1/2 mt-12 md:mt-0">
+     <img alt="Air conditioning service technician repairing an AC unit with tools in a modern home" class="rounded-lg shadow-lg mx-auto" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/62dbae3a-d73d-4442-e1f2-a5addbcc9f54.jpg" width="600"/>
+    </div>
+   </div>
+  </header>
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="features">
+   <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">
+    Our Features
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon representing fast air conditioning service with a stopwatch and lightning bolt" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/53ca31bb-f523-465d-0f4d-5d20d2e68f09.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Fast &amp; Reliable Service
+     </h3>
+     <p>
+      Quick response and efficient repair to keep you cool without delay.
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon showing affordable pricing with a price tag and currency symbol" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9e786159-1613-49b7-b16d-7037d2b58fb9.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Affordable Pricing
+     </h3>
+     <p>
+      Competitive rates with no hidden charges for all services.
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon of a professional technician with a wrench and gear symbol" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/dbdbdf0e-c463-4182-3a23-e48165428b94.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Expert Technicians
+     </h3>
+     <p>
+      Certified and experienced technicians ensuring quality repairs.
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon representing warranty support with a shield and checkmark" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2f7df702-d96b-4857-ff3f-7ff6d45fa4f7.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Warranty Support
+     </h3>
+     <p>
+      All repairs come with a warranty for your peace of mind.
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon showing 24/7 availability with a clock and calendar" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8f642acd-91d3-48bf-2afe-8376a5001978.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      24/7 Availability
+     </h3>
+     <p>
+      Round-the-clock service to handle emergencies anytime.
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transform transition duration-500 hover:scale-105">
+     <img alt="Icon showing map marker with multiple locations representing service area" class="mb-4" height="120" loading="lazy" src="https://storage.googleapis.com/a1aa/image/2084ce83-6f18-4ea8-2e76-ce5738e8f007.jpg" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Wide Service Area
+     </h3>
+     <p>
+      Covering Malviya Nagar, Hauz Khas, Green Park, Greater Kailash, RK Puram, Okhla, Jamia Nagar, and South Delhi.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Sliding Images Section -->
+  <section class="bg-white py-16">
+   <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">
+     AC Service Gallery
+    </h2>
+    <div class="overflow-hidden rounded-lg shadow-lg">
+     <div class="slider-track">
+      <img alt="Technician cleaning an air conditioner filter with tools in a residential setting" class="w-[20%] object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/4b104122-f24f-4947-896d-8ff297bba899.jpg" width="600"/>
+      <img alt="Professional installing a split air conditioner unit on a wall inside a modern home" class="w-[20%] object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/658bfa69-72e5-4c7f-0e9b-5fdd93926ba8.jpg" width="600"/>
+      <img alt="Close-up of AC repair tools and a technician fixing an air conditioning unit" class="w-[20%] object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6f334144-dfa2-4f73-76bc-dbaf1fda3810.jpg" width="600"/>
+      <img alt="Technician performing routine maintenance on an air conditioning unit outdoors" class="w-[20%] object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a07edfeb-6777-463d-ce6a-a45247265675.jpg" width="600"/>
+      <img alt="Newly installed air conditioning unit on a wall with remote control in hand" class="w-[20%] object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f65161a8-ffe9-4d0d-7f2d-25803ed20a26.jpg" width="600"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Our Work Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="our-work">
+   <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">
+    Our Work
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Air conditioning unit before repair showing dirt and damage" class="w-full object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ed2415f6-5fe7-4624-16aa-67e31de96ba0.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">
+       AC Unit Before Repair
+      </h3>
+      <p>
+       Dirty and malfunctioning AC unit before our expert service.
+      </p>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Technician repairing an air conditioning unit with tools and diagnostic equipment" class="w-full object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/fbf31272-68e4-4818-f014-e59027684b9f.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">
+       During Repair
+      </h3>
+      <p>
+       Our technician carefully diagnosing and fixing the AC unit.
+      </p>
+     </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+     <img alt="Clean and fully functional air conditioning unit after professional repair" class="w-full object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/291a6c48-7fe2-4220-73a8-2e47a811c812.jpg" width="600"/>
+     <div class="p-6">
+      <h3 class="text-xl font-semibold mb-2">
+       After Repair
+      </h3>
+      <p>
+       AC unit working perfectly after our expert service.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Expert Technician Section -->
+  <section class="bg-blue-50 py-20" id="technician">
+   <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8 text-blue-700">
+     Meet Our Expert Technician
+    </h2>
+    <img alt="Portrait of Waseem Malik, expert AC technician wearing uniform and smiling" class="mx-auto rounded-full shadow-lg mb-6" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1fede34e-71ff-4990-776a-247b0695b767.jpg" width="200"/>
+    <h3 class="text-2xl font-semibold mb-2">
+     Waseem Malik
+    </h3>
+    <p class="text-lg max-w-xl mx-auto">
+     With over 10 years of experience, Waseem Malik is a certified AC technician known for his professionalism, expertise, and customer satisfaction. He ensures every job is done right the first time.
+    </p>
+   </div>
+  </section>
+  <!-- Customer Reviews Section -->
+  <section class="max-w-7xl mx-auto px-6 py-20" id="reviews">
+   <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">
+    Customer Reviews
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+     <img alt="Photo of customer named Anjali Sharma, smiling woman with black hair" class="rounded-full mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f3c25953-e824-40e2-665a-42619df1cd10.jpg" width="100"/>
+     <h4 class="font-semibold text-lg mb-1">
+      Anjali Sharma
+     </h4>
+     <div class="flex text-yellow-400 mb-3">
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star-half-alt">
+      </i>
+     </div>
+     <p>
+      "Excellent service! Waseem was very professional and fixed my AC quickly. Highly recommend Trusted AC Service."
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+     <img alt="Photo of customer named Rajiv Kumar, middle-aged man with glasses and beard" class="rounded-full mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c4fef3eb-4184-4f1e-75cb-9498570da4db.jpg" width="100"/>
+     <h4 class="font-semibold text-lg mb-1">
+      Rajiv Kumar
+     </h4>
+     <div class="flex text-yellow-400 mb-3">
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+     </div>
+     <p>
+      "Very affordable and reliable. The technician was knowledgeable and courteous. My AC works perfectly now."
+     </p>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+     <img alt="Photo of customer named Priya Singh, young woman with long hair and glasses" class="rounded-full mb-4" height="100" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e6834976-2d1b-4702-26d9-5e077f8e6def.jpg" width="100"/>
+     <h4 class="font-semibold text-lg mb-1">
+      Priya Singh
+     </h4>
+     <div class="flex text-yellow-400 mb-3">
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star">
+      </i>
+      <i class="fas fa-star-half-alt">
+      </i>
+      <i class="far fa-star">
+      </i>
+     </div>
+     <p>
+      "Good service but took a little longer than expected. Overall satisfied with the repair quality."
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="bg-blue-600 text-white py-20" id="contact">
+   <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">
+     Contact Us
+    </h2>
+    <p class="mb-6 text-lg">
+     Phone:
+     <a class="underline hover:text-gray-200" href="tel:7906371476">
+      7906371476
+     </a>
+     <br/>
+     Email:
+     <a class="underline hover:text-gray-200" href="mailto:waseemmalik71476@gmail.com">
+      waseemmalik71476@gmail.com
+     </a>
+    </p>
+    <p class="mb-6 text-lg max-w-xl mx-auto">
+     We proudly serve the following areas: Malviya Nagar, Hauz Khas, Green Park, Greater Kailash, RK Puram, Okhla, Jamia Nagar, and South Delhi.
+    </p>
+    <form action="#" aria-label="Contact form" class="max-w-md mx-auto space-y-6 text-gray-900 bg-white rounded-lg p-8 shadow-lg" method="POST">
+     <div>
+      <label class="block font-semibold mb-1" for="name">
+       Name
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="name" name="name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block font-semibold mb-1" for="email">
+       Email
+      </label>
+      <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="email" name="email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block font-semibold mb-1" for="message">
+       Message
+      </label>
+      <textarea class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" id="message" name="message" required="" rows="4"></textarea>
+     </div>
+     <button class="w-full bg-blue-600 text-white font-semibold py-3 rounded hover:bg-blue-700 transition" type="submit">
+      Send Message
+     </button>
+    </form>
+   </div>
+  </section>
+  <!-- Floating WhatsApp Button -->
+  <a aria-label="Chat on WhatsApp" href="https://wa.me/917906371476" id="whatsapp-btn" rel="noopener noreferrer" target="_blank" title="Chat on WhatsApp">
+   <i class="fab fa-whatsapp">
+   </i>
+  </a>
+  <!-- Floating Call Button -->
+  <a aria-label="Call Now" href="tel:7906371476" id="call-btn" title="Call Now">
+   <i class="fas fa-phone-alt">
+   </i>
+  </a>
+  <script>
+   // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>
